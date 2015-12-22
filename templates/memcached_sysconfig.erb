@@ -6,7 +6,7 @@ end
 if @lock_memory
   result << '-k'
 end
-if @listen_ip
+if @listen_ip and not @unix_socket
   result << '-l ' + @listen_ip
 end
 if @udp_port
